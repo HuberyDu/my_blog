@@ -175,3 +175,19 @@ p.wo:first-letter {
 .panel h3 {
 	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
 }
+.muiti-contact {
+	font: 400 50px/1.8 'Quattrocento Sans', 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
+	text-align: center;
+	cursor: default;
+	color: rgba(0, 0, 0, 0.4);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+	-webkit-user-select: text;
+}
+.leave_message {
+	font: 400 40px/1.8 'Quattrocento Sans', 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
+	cursor: default;
+	color: rgba(0, 0, 0, 0.4);
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+	-webkit-user-select: text;
+	padding-left: 60px;
+}

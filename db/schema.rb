@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140110071501) do
+ActiveRecord::Schema.define(:version => 20140521022717) do
 
   create_table "articles", :force => true do |t|
     t.string   "chinese_title"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(:version => 20140110071501) do
     t.string   "french_name"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "leave_messages", :force => true do |t|
+    t.string   "name"
+    t.string   "comment"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "user_categories", :force => true do |t|

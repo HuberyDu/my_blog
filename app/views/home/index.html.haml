@@ -1,8 +1,16 @@
 %header#banner.hero-unit.no-radius
+  .row
+    .span12.content.text_center{style:"border:1px soild #000"}
+      - unless alert.blank?
+        .alert.alert-error.fade.in
+          %a.close{"data-dismiss" => "alert"} &times;
+          = t(alert, scope:"alert")
+      - unless notice.blank?
+        .alert.alert-success.fade.in
+          %a.close{"data-dismiss" => "alert"} &times;
+          = t(notice, scope:"notice")
   .container.text-center
     %h1
-      / %img{alt: "Dandy Weng", src: "http://dandyweng.qiniudn.com/images/title@2x.png"}/
-    / <p>网站正在建设中</p>
   %span.banner-link.hidden-phone
     %a《地平线》-原研哉
 %article.container
@@ -66,4 +74,34 @@
                 %img{src: "http://xiaolong.u.qiniudn.com/21.jpeg"}
             %a.carousel-control.left{"data-slide" => "prev", href: "#mara"} ‹
             %a.carousel-control.right{"data-slide" => "next", href: "#mara"} ›
+  %section#programme.row
+    .span12.panel
+      .row
+        .span12
+          .padding-large
+            %h1 编程
+            
+  / 联系 Contact
+  %section#contact.row
+    .span12.panel
+      .row
+        .span12
+          .padding-large
+            %h1 联系
+            .muiti-contact
+              %span.email
+                %email{"data-toggle" => "tooltip", title: "Email"} duxiaolong92@gmail.com
+        .span12
+          .padding-large
+            .row
+              .span2
+                %h1 留言
+              .span9
+                .leave_message
+                  = simple_form_for @leave_message, url: leave_messages_path, method: :post do |f|
+                    = f.input :name, label: false, input_html:{ class:"input-xxlarge"}, placeholder: "姓名"
+                    = f.input :comment, label: false, as: :text,placeholder: "留言", input_html:{rows: "5", class:"input-xxlarge"}
+                    .action
+                      = f.submit "提交", class: "btn"
+
         

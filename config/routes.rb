@@ -3,6 +3,7 @@ Bancheng::Application.routes.draw do
 
   resources :home, only: :index
   resources :categories, only: :show
+  resources :leave_messages, :create
   resources :articles do
     collection do
       get :search
