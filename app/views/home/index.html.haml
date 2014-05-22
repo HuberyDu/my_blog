@@ -100,6 +100,7 @@
                 .leave_message
                   = simple_form_for @leave_message, url: leave_messages_path, method: :post do |f|
                     = f.input :name, label: false, input_html:{ class:"input-xxlarge"}, placeholder: "姓名"
+                    = f.input :email, label: false, input_html:{class:"input-xxlarge"}, placeholder: "邮箱"
                     = f.input :comment, label: false, as: :text,placeholder: "留言", input_html:{rows: "5", class:"input-xxlarge"}
                     .action
                       = f.submit "提交", class: "btn"
