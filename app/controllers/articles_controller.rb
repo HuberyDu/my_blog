@@ -1,13 +1,12 @@
 class ArticlesController < ApplicationController
   def index
-  	articles = Article.all
+  	@articles = Article.all
   end
 
   def show
+    @articles = Article.all
   	@article = Article.find(params[:id])
-    if @article.status != "public"
-      redirect_to root_path, alert: "this article isn't exist" 
-    end
+    @comment = @article.comments.build
   end
 
   def search

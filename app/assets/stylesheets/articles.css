@@ -1,0 +1,99 @@
+.span12{
+	margin-left: 0px;
+}
+.navbar-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.article_left{
+	margin-top:40px;
+}
+.article_right{
+	margin-top:40px;
+}
+.article{
+	padding: 30px;
+	height: 100px;
+	overflow: hidden;
+	position: relative;
+}
+.whole_article{
+	padding: 30px;
+}
+.read_more{
+	display: block;
+	width: 80px;
+	padding: 6px 15px;
+	margin-top: 20px;
+	margin-left: 30px;
+	margin-bottom: 20px;
+	background: #bbb;
+	color: #fff;
+	text-align: center;
+	-webkit-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	border-radius: 6px;
+}
+.article_panel a:hover{
+	color: #333; 
+	text-decoration: none;
+}
+.blank{
+	height: 1px;
+}
+.widgetitle{
+	padding: 10px 17px 8px 15px;
+	-webkit-border-top-left-radius: 6px;
+	-webkit-border-top-right-radius: 6px;
+	-moz-border-top-left-radius: 6px;
+	-moz-border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	background-color: rgb(216, 216, 216);
+	font: inherit;
+	font-size: 13px;
+	color: #464646;
+	text-shadow: 1px 2px 2px #fff;
+	border-bottom: none;
+	cursor: default;
+}
+.article_right ul{
+	margin: 15px;
+	padding-bottom: 10px;
+}
+.article_list li{
+	list-style: none;
+	border-bottom: solid 1px #ddd;
+	margin: 0;
+}
+.article_mark li{
+	list-style: none;
+	border-bottom: solid 1px #ddd;
+	margin: 0;
+}
+.article_panel {
+	background: #FFF url("http://dw-resources.qiniudn.com/images/patterns/white_wall_hash.jpg");
+	padding: 0px;
+	margin-bottom: 30px;
+	color: #333;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-animation: panel-in 1s linear 0 1;
+	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+}
+.comment{
+	padding: 15px 30px 15px 30px; 
+}
+.comment_time{
+	color: #999;
+}
+

@@ -5,7 +5,7 @@ class LeaveMessagesController < ApplicationController
       UserMailer.leave_message(@leave_message).deliver
       redirect_to root_path, notice: t("leave_message_success", scope: "notice")
     else
-      redirect_to root_path, notice: t("leave_message_failed", scope: "alert")
+      redirect_to root_path, alert: t("leave_message_failed", scope: "alert")
     end
   end
 end

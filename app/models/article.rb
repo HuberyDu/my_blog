@@ -1,8 +1,8 @@
 class Article < ActiveRecord::Base
   attr_accessible :category_id, :chinese_title, :french_title,
-                  :chinese_content, :french_content, :status
+                  :chinese_content, :french_content, :status, :article_id
   belongs_to :category
-
+  has_many :comments
   before_save :default_status
 
   validates :chinese_title, presence: true, length:{maximum: 200}

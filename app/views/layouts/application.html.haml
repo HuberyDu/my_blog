@@ -10,6 +10,7 @@
     /[if lt IE 9]
       = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
     = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag params[:controller]
     = javascript_include_tag "application"
 
 
@@ -19,7 +20,9 @@
         .container-fluid
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "简述", "/path1"
+              %li= link_to "旅行", "/path2"
+              %li= link_to "马拉松", "/path3"
+              %li= link_to "编程", "/"
+              %li= link_to "博客", articles_path
     = yield

@@ -39,7 +39,7 @@ zh-CN:
     user_failed_updated: 用户更新失败
     captcha_wrong: 验证码错误
     leave_message_failed: 留言失败，请重新操作
-
+    comment_failed: 评论失败
 
   notice:
     success_reject: 文章成功撤回
@@ -54,6 +54,7 @@ zh-CN:
     user_success_created: 用户创建成功
     user_success_updated: 用户更新成功
     leave_message_success: 留言已经发送到小龙的邮箱
+    comment_success: 评论成功
 
 
 
