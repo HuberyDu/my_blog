@@ -20,6 +20,7 @@ body {
   color: #fff;
   height: 400px;
   margin-bottom: 0;
+  margin-top: 40px;
 }
 .hero-unit h1 {
   /* font: 88px Minion,'Optima', "Times New Roman", Times, serif; */
@@ -162,7 +163,7 @@ p.wo:first-letter {
 	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
 	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
 }
-.panel h1, .panel h3 {
+.panel h1, .panel h3, h4 {
 	cursor: default;
 	background: -webkit-linear-gradient(top, rgba(70, 70, 70, 1) 0%,rgba(111, 111, 111, 1) 50%,rgba(10, 14, 10, 1) 51%,rgba(10, 8, 9, 1) 100%);
 	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
@@ -172,11 +173,9 @@ p.wo:first-letter {
 	-moz-transition: .5s;
 	transition: .5s;
 }
-.panel h3 {
-	-webkit-box-reflect: below -17px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.4, transparent), to(rgba(3,3,3,.2)));
-}
+
 .muiti-contact {
-	font: 400 50px/1.8 'Quattrocento Sans', 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
+	font: 400 35px/1.8 'Quattrocento Sans', 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
 	text-align: center;
 	cursor: default;
 	color: rgba(0, 0, 0, 0.4);
@@ -184,10 +183,35 @@ p.wo:first-letter {
 	-webkit-user-select: text;
 }
 .leave_message {
-	font: 400 40px/1.8 'Quattrocento Sans', 'Optima', 'Verdana', 'Microsoft Yahei', sans-serif;
 	cursor: default;
-	color: rgba(0, 0, 0, 0.4);
-	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-	-webkit-user-select: text;
 	padding-left: 60px;
+	padding-top: 30px;
+}
+.text-shadow{
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.about_me{
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.about_me p{
+	text-align: center;
+	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
+}
+.about_me{
+	padding-top: 25px;
+	padding-bottom: 10px;
+	text-align: center;
+	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
+	background: #FFF url("http://dw-resources.qiniudn.com/images/patterns/white_wall_hash.jpg");
+	padding-bottom: 10px;
+	margin: 0px;
+	margin-top: 30px;
+	color: #333;
+	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
 }

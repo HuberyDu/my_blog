@@ -2,7 +2,7 @@
   %thead
     %tr
       %td 文章名称
-      %td 状态
+      %td 标签
       %td 操作
     %tbody
     - @articles.each do |article|
@@ -10,7 +10,9 @@
         %tr{class: article_status_class(article)}
           %td
             = link_to article.title, edit_admin_article_path(article)
-          %td= t(article.status)
+          %td
+            - article.tags.each do |tag|
+              = tag
           %td
             - if can? :edit, article
               = link_to '编辑', edit_admin_article_path(article)

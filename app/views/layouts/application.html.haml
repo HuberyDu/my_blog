@@ -4,7 +4,7 @@
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %title= content_for?(:title) ? yield(:title) : "Bancheng"
+    %title= content_for?(:title) ? yield(:title) : "xiaolong"
     = csrf_meta_tags
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
@@ -16,15 +16,18 @@
 
 
   %body
-    .navbar.navbar-fluid-top.navbar-inverse
+    .navbar.navbar-fluid-top.navbar-inverse.navbar-fixed-top
       .navbar-inner
         .container-fluid
           .container.nav-collapse
+            - if params[:controller] == "articles"
+              .span1
             %ul.nav
               %li= link_to "主页", root_path
-              %li= link_to "旅行", "#photography"
-              %li= link_to "马拉松", "#marathon"
-              %li= link_to "编程", "#code"
-              %li= link_to "联系", "#contact"
+              - if params[:controller] == "home"
+                %li= link_to "旅行", "#photography"
+                %li= link_to "马拉松", "#marathon"
+                %li= link_to "编程", "#code"
+                %li= link_to "联系", "#contact"
               %li= link_to "博客", articles_path
     = yield

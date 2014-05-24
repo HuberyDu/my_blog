@@ -6,7 +6,15 @@ class Article < ActiveRecord::Base
   validates :title, presence: true, length:{maximum: 200}
 
   def self.search_by_title(title)
-    self.where("chinese_title like ? or french_title like ?", "%#{title}%", "%#{title}%")
+    self.where("title like ?", "%#{title}%")
+  end
+
+  def prev
+  	Article.where("id < ?", self.id).order("id DESC").first
+  end
+
+  def next
+  	Article.where("id > ?", self.id).order("id ASC").first
   end
 end
 

@@ -1,31 +1,20 @@
 //= require validate
 
 $(document).ready(function(){
-	var ps = $(".whole_article").children();
-	for(var i=0; i<ps.length; i++){
-		p = ps.eq(i);
-		if (p.css("background-color") == "rgb(255, 255, 255)"){
-			p.css("background-color", "");
-		}
-		if (p.css("color") == "rgb(51, 51, 51)"){
-			p.css("color", "#fff")
-		}
-	}
-
-	var validator = new FormValidator('comment', [{
-            name: 'comment[name]',
+    var validator = new FormValidator('leave_message', [{
+            name: 'leave_message[name]',
             display: 'required',    
             rules: 'required'
         }, {
-            name: 'comment[email]',
+            name: 'leave_message[email]',
             rules: 'required|valid_email'
         }, {
-        	name: 'comment[content]',
-        	rules: 'required'
+            name: 'leave_message[comment]',
+            rules: 'required'
         }], function(errors) {
             if (errors.length > 0) {
                 console.info(errors);
-                $('#new_comment span').remove();
+                $('#new_leave_message span').remove();
                 for(var err in errors)
                 {
                     var input = $("#"+errors[err].id);

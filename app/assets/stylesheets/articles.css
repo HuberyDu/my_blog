@@ -1,6 +1,9 @@
 a{
  	color: #8D8D8D;
 }
+form{
+	margin: 0px;
+}
 .span12{
 	margin-left: 0px;
 }
@@ -10,10 +13,10 @@ a{
   border-radius: 0;
 }
 .article_left{
-	margin-top:40px;
+	margin-top:80px;
 }
 .article_right{
-	margin-top:40px;
+	margin-top:80px;
 }
 .article{
 	padding: 30px;
@@ -23,6 +26,34 @@ a{
 }
 .whole_article{
 	padding: 30px;
+}
+.whole_article .title{
+	color: #000;
+}
+.whole_article .footer{
+	color: rgba(0,0,0,0.6);
+	float: left;
+}
+.whole_article .footer ul{
+	list-style: none;
+	margin-left: 0px;
+}
+.whole_article .footer ul .tags{
+	margin-left: 20px;
+	color: rgba(0,0,0,0.6);
+}
+.whole_article .footer ul a{
+	color: rgba(0,0,0,0.6);
+}
+.whole_article .footer ul li{
+	float: left;
+}
+.whole_article .footer ul .prev{
+	float: right;
+}
+.whole_article .footer ul .next{
+	float: right;
+	margin-left: 20px;
 }
 .read_more{
 	display: block;
@@ -86,7 +117,6 @@ a{
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	border-radius: 6px;
-	-webkit-animation: panel-in 1s linear 0 1;
 	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
 	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
 	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
@@ -98,5 +128,21 @@ a{
 }
 .comment_time{
 	color: #999;
+}
+.about_me{
+	padding-top: 25px;
+	padding-bottom: 10px;
+	text-align: center;
+	-webkit-box-reflect: below -7px -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(.2, transparent), to(rgba(3,3,3,.1)));
+	background: #FFF url("http://dw-resources.qiniudn.com/images/patterns/white_wall_hash.jpg");
+	padding-bottom: 10px;
+	margin: 0px;
+	margin-top: 30px;
+	color: #333;
+	-webkit-box-shadow: 0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow:    0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-ms-box-shadow:     0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	-o-box-shadow:      0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
+	box-shadow:         0px 1px 8px 1.5px rgba(0, 0, 0, .35), 0px 20px 70px 8px rgba(0, 0, 0, 0.25);
 }
 

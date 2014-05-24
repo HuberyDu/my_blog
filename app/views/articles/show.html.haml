@@ -5,8 +5,22 @@
       .span7.article_left
         .article_panel
           .whole_article
-            = @article.title
+            %h3.title
+              = @article.title
             = raw(@article.content)
+            .footer
+              %ul.span6
+                %li
+                  %i.icon-calendar
+                    = @article.created_at.strftime("%Y-%m-%d")
+                %li.tags
+                  %i.icon-tags
+                    - @article.tags.each do |tag|
+                      = link_to tag.name, articles_path(tag_id: tag.id)
+                %li.next 
+                  = (link_to "下一篇", article_path(@article.next)) unless @article.next.nil?
+                %li.prev
+                  = (link_to "上一篇", article_path(@article.prev)) unless @article.prev.nil?
           %p.blank
         - @article.comments.each do |comment|
           .article_panel.comment
@@ -18,7 +32,7 @@
               = comment.created_at
         .article_panel.comment
           %h3 评论下吧
-          = simple_form_for @comment, url: article_comments_path(@article), method: :post do |f|
+          = simple_form_for @comment, url: article_comments_path(@article), method: :post, html:{name: "comment"} do |f|
             = f.input :name, label: false, input_html:{ class:"input-xlarge"}, placeholder: "名称"
             = f.input :email, label: false, input_html:{class:"input-xlarge"}, placeholder: "邮箱"
             = f.input :content, label: false, as: :text,placeholder: "留言", input_html:{rows: "5", class:"input-xxlarge"}

@@ -6,7 +6,8 @@
         - @articles.each do |article|
           .article_panel
             .article.whole_article
-              = article.title
+              %h3.title
+                = article.title
               = raw(article.content)
             = link_to "阅读全文", article_path(article.id), class:"read_more"
             %p.blank 
@@ -14,3 +15,4 @@
         = render "lately_article"
         = render "tags"
       .span1
+= render "footer"

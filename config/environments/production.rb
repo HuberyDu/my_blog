@@ -48,12 +48,15 @@ Bancheng::Application.configure do
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w(
     articles.js
-    site.css
     admin/error.css
     users.js
     admin/users.js
     admin/edit_user.js
     admin/articles.js
+    home.css
+    articles.css
+    home.js
+    articles.css
    )
 
   # Disable delivery errors, bad email addresses will be ignored
