@@ -1,0 +1,6 @@
+.article_panel
+  .widgetitle 最新文章
+  %ul.article_list
+    - @articles.each do |article|
+      %li
+        = link_to article.title, article_path(article)

@@ -1,7 +1,6 @@
 module Admin
 
   class UsersController < Admin::BaseController
-    load_and_authorize_resource
     
     def index
       @users = User.order("id desc")

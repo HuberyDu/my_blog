@@ -2,39 +2,11 @@ module Admin
   class ArticlesController < Admin::BaseController
     
     def index
-      @current_category = Category.find(params[:category_id]) unless params[:category_id].blank?
-      if @current_category.blank?
-        @current_category = current_user.categories.first
-      end
-      @articles = Array.new
-      @articles = @current_category.articles unless @current_category.blank?
-    end
-
-    def reject
-      @article = Article.find(params[:id])
-      @article.status = "pending"
-      if @article.save
-        redirect_to admin_articles_path(category_id: @article.category.id),
-                                        notice: "success_reject"
-      else
-        render action:"edit", alert: "failed_reject"
-      end
-    end
-
-    def approve
-      @article = Article.find(params[:id])
-      @article.status = "public"
-      if @article.save
-        redirect_to admin_articles_path(category_id: @article.category.id),
-                                        notice: "success_approve"
-      else
-        render action:"edit", alert: "failed_approve"
-      end
+      @articles = Article.all
     end
 
     def new
       @article = Article.new
-      @current_category = Category.find(params[:category_id]) unless params[:category_id].blank?
     end
 
     def edit
@@ -45,7 +17,7 @@ module Admin
     def create
       @article = Article.new(params[:article])
       if @article.save
-        redirect_to admin_articles_path(category_id: @article.category_id), notice: 'article_success_created'
+        redirect_to admin_articles_path, notice: 'article_success_created'
       else
         render action: "new", alert: 'article_failed_created'
       end

@@ -1,17 +1,9 @@
 class Article < ActiveRecord::Base
-  attr_accessible :category_id, :chinese_title, :french_title,
-                  :chinese_content, :french_content, :status, :article_id
-  belongs_to :category
+  attr_accessible :title, :content, :status, :article_id, :tag_list
+  acts_as_taggable
   has_many :comments
-  before_save :default_status
 
-  validates :chinese_title, presence: true, length:{maximum: 200}
-  validates :french_title, presence: true, length: {maximum: 200}
-  validates :category_id, presence: true
-
-  def default_status
-  	self.status ||= 'pending'
-  end
+  validates :title, presence: true, length:{maximum: 200}
 
   def self.search_by_title(title)
     self.where("chinese_title like ? or french_title like ?", "%#{title}%", "%#{title}%")

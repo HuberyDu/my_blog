@@ -23,7 +23,7 @@
         %p
           %span.hidden-phone> 这是我的个人网站，
           欢迎访问
-          %a{href: "http://jianshu.io/users/bc8d0113cc44/latest_articles", target: "_blank"}> 我的博客
+          = link_to "我的博客", articles_path
           和
           %a{href: "https://github.com/HuberyDu", target: "_blank"} 我的github
   %section#photography.row
@@ -36,15 +36,18 @@
               %li{"data-slide-to" => "1", "data-target" => "#photograph"}
               %li{"data-slide-to" => "2", "data-target" => "#photograph"}
               %li{"data-slide-to" => "3", "data-target" => "#photograph"}
+              %li{"data-slide-to" => "4", "data-target" => "#photograph"}
             .carousel-inner
               .active.item
-                %img{src: "http://xiaolong.u.qiniudn.com/2.jpeg?imageView/2/h/650"}/
+                %img{src: "http://xiaolong.u.qiniudn.com/2.jpeg"}/
               .item
-                %img{src: "http://xiaolong.u.qiniudn.com/1.jpeg?imageView/2/h/650"}/
+                %img{src: "http://xiaolong.u.qiniudn.com/1.jpeg"}/
               .item
-                %img{src: "http://xiaolong.u.qiniudn.com/3.jpeg?imageView/2/h/650"}
+                %img{src: "http://xiaolong.u.qiniudn.com/3.jpeg"}
               .item
-                %img{src: "http://xiaolong.u.qiniudn.com/4.jpeg?imageView/2/h/650"}
+                %img{src: "http://xiaolong.u.qiniudn.com/4.jpeg"}
+              .item
+                %img{src: "http://xiaolong.u.qiniudn.com/5.jpeg"}
             %a.carousel-control.left{"data-slide" => "prev", href: "#photograph"} ‹
             %a.carousel-control.right{"data-slide" => "next", href: "#photograph"} ›
         .span4
@@ -73,7 +76,7 @@
                 %img{src: "http://xiaolong.u.qiniudn.com/21.jpeg"}
             %a.carousel-control.left{"data-slide" => "prev", href: "#mara"} ‹
             %a.carousel-control.right{"data-slide" => "next", href: "#mara"} ›
-  %section#programme.row
+  %section#code.row
     .span12.panel
       .row
         .span12

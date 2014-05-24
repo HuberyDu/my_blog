@@ -12,6 +12,7 @@
     = stylesheet_link_tag "application", :media => "all"
     = stylesheet_link_tag params[:controller]
     = javascript_include_tag "application"
+    = javascript_include_tag params[:controller]
 
 
   %body
@@ -20,9 +21,10 @@
         .container-fluid
           .container.nav-collapse
             %ul.nav
-              %li= link_to "简述", "/path1"
-              %li= link_to "旅行", "/path2"
-              %li= link_to "马拉松", "/path3"
-              %li= link_to "编程", "/"
+              %li= link_to "主页", root_path
+              %li= link_to "旅行", "#photography"
+              %li= link_to "马拉松", "#marathon"
+              %li= link_to "编程", "#code"
+              %li= link_to "联系", "#contact"
               %li= link_to "博客", articles_path
     = yield

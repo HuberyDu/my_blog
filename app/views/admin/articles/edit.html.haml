@@ -3,16 +3,6 @@
     %h3.title 文章编辑
   .span3
     %h5
-      = link_to '返回文章列表', admin_articles_path(category_id: @article.category_id )
-
-- if can? :approve, @article
-  = simple_form_for @article, url: approve_admin_article_path, method: "PUT", html:{class:"pull-left"} do |f|
-    = f.button :submit, "通过", class:"btn btn-success"
-- if can? :reject, @article
-  = simple_form_for @article, url: reject_admin_article_path, method: "PUT", html:{class:"pull-left"} do |f|
-    = f.button :submit, "撤回", class:"btn btn-danger"
-- if can? :delete, @article
-  = simple_form_for @article, url: admin_article_path(@article), method: :delete do |f|
-    = f.button :submit, "删除", class:"btn btn-danger", data: {confirm: "确定 ?"}
+      = link_to '返回文章列表', admin_articles_path
 = render 'form'
 

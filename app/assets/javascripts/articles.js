@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var ps = $(".tailcont").children();
+	var ps = $(".whole_article").children();
 	for(var i=0; i<ps.length; i++){
 		p = ps.eq(i);
 		if (p.css("background-color") == "rgb(255, 255, 255)"){

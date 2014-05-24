@@ -1,0 +1,6 @@
+.article_panel
+  .widgetitle 标签
+  %ul.article_mark
+    - @tags.each do |tag|
+      %li
+        = link_to tag.name, articles_path(tag_id: tag.id) 

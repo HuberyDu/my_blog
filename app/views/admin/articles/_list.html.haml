@@ -9,10 +9,7 @@
       - if article.status != "deleted"
         %tr{class: article_status_class(article)}
           %td
-            - if article.chinese_title.nil? || article.chinese_title.blank?
-              = link_to article.french_title, edit_admin_article_path(article)
-            - else
-              = link_to article.chinese_title, edit_admin_article_path(article)
+            = link_to article.title, edit_admin_article_path(article)
           %td= t(article.status)
           %td
             - if can? :edit, article

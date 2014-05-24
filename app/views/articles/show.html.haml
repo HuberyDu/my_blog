@@ -5,8 +5,8 @@
       .span7.article_left
         .article_panel
           .whole_article
-            = @article.chinese_title
-            = raw(@article.chinese_content)
+            = @article.title
+            = raw(@article.content)
           %p.blank
         - @article.comments.each do |comment|
           .article_panel.comment
@@ -25,15 +25,6 @@
             .action         
               = f.submit "提交", class: "btn"
       .span3.article_right
-        .article_panel
-          .widgetitle 最新文章
-          %ul.article_list
-            - @articles.each do |article|
-              %li
-                =article.chinese_title
-        .article_panel
-          .widgetitle 标签
-          %ul.article_mark
-            %li 生活
-            %li ruby on rails
+        = render "lately_article"
+        = render "tags"
       .span1

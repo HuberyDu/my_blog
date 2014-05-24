@@ -2,24 +2,14 @@ Bancheng::Application.routes.draw do
   captcha_route
 
   resources :home, only: :index
-  resources :categories, only: :show
-  resources :leave_messages, :create
+  resources :leave_messages, only: :create
   resources :articles do
-    collection do
-      get :search
-    end
     resources :comments
   end
   namespace :admin do
     resources :users
     resources :home, only: :index
-    resources :categories, except: :show
-    resources :articles, except: :show do
-      member do
-        put :reject
-        put :approve
-      end
-    end
+    resources :articles, except: :show 
   end
 
   devise_for :users, controllers: {sessions: "sessions"}
