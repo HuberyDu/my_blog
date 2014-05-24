@@ -6,7 +6,6 @@
         %span *中文标题
         .row
           .span5
-            = f.input :title, input_html:{style:"width:100%"}, label: false
       = f.input :content, :as => :kindeditor, :input_html => { :items => [ 'undo', 'redo', '|', 'justifyleft', 'justifycenter', 'justifyright', 'justifyfull', 'fontname', 'fontsize', '|', 'forecolor', 'bold','italic', 'underline','flash', '|', 'image', 'media'] }
       = f.input :tag_list
   .form-actions
