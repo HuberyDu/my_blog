@@ -12,7 +12,7 @@
               %ul.span6
                 %li
                   %i.icon-calendar
-                    = @article.created_at.strftime("%Y-%m-%d")
+                    = @article.created_at.strftime("%Y-%m-%d %H:%M")
                 %li.tags
                   %i.icon-tags
                     - @article.tags.each do |tag|
@@ -23,13 +23,14 @@
                   = (link_to "上一篇", article_path(@article.prev)) unless @article.prev.nil?
           %p.blank
         - @article.comments.each do |comment|
-          .article_panel.comment
-            %h4 
-              = comment.name
-            %p
-              = comment.content
-            .comment_time
-              = comment.created_at
+          - if !comment.id.nil?
+            .article_panel.comment
+              %h4 
+                = comment.name
+              %p
+                = comment.content
+              .comment_time
+                = comment.created_at.strftime("%Y-%m-%d %H:%M")
         .article_panel.comment
           %h3 评论下吧
           = simple_form_for @comment, url: article_comments_path(@article), method: :post, html:{name: "comment"} do |f|
