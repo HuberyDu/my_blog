@@ -16,5 +16,13 @@ class Article < ActiveRecord::Base
   def next
   	Article.where("id > ?", self.id).order("id ASC").first
   end
+
+  def self.lately_article
+    if self.all.size > 5
+      return self
+    else
+      self.where("")
+    end
+  end
 end
 

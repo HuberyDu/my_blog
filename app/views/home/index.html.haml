@@ -35,19 +35,13 @@
               %li.active{"data-slide-to" => "0", "data-target" => "#photograph"}
               %li{"data-slide-to" => "1", "data-target" => "#photograph"}
               %li{"data-slide-to" => "2", "data-target" => "#photograph"}
-              %li{"data-slide-to" => "3", "data-target" => "#photograph"}
-              %li{"data-slide-to" => "4", "data-target" => "#photograph"}
             .carousel-inner
               .active.item
-                %img{src: "http://xiaolong.u.qiniudn.com/2.jpeg"}/
+                %img{src: "http://xiaolong.u.qiniudn.com/1.jpg"}/
               .item
-                %img{src: "http://xiaolong.u.qiniudn.com/1.jpeg"}/
+                %img{src: "http://xiaolong.u.qiniudn.com/2.jpg"}/
               .item
-                %img{src: "http://xiaolong.u.qiniudn.com/3.jpeg"}
-              .item
-                %img{src: "http://xiaolong.u.qiniudn.com/4.jpeg"}
-              .item
-                %img{src: "http://xiaolong.u.qiniudn.com/5.jpeg"}
+                %img{src: "http://xiaolong.u.qiniudn.com/3.jpg"}
             %a.carousel-control.left{"data-slide" => "prev", href: "#photograph"} ‹
             %a.carousel-control.right{"data-slide" => "next", href: "#photograph"} ›
         .span4
@@ -101,9 +95,7 @@
                     .action
                       = f.submit "提交", class: "btn"
 .about_me
-  %p 网站采用ruby on rails搭建, 其主页的设计风格参考<a href="http://www.dandyweng.com/">Dandy Weng</a>
-  %p 建议使用 Chrome 或 Safari 浏览器以保证显示效果
-  %p 联系我: duxiaolong92@gmail.com
+  = render "shared/footer"
 
 
 
