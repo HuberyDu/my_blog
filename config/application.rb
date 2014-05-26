@@ -50,18 +50,6 @@ module Bancheng
       Devise::PasswordsController.layout "admin"
     end
 
-    config.action_mailer.delivery_method = :smtp
-    email_config = YAML::load(File.read(Rails.root.to_s + '/config/email_config.yml'))
-    config.action_mailer.smtp_settings = {
-      :address => email_config['address'],
-      :port => email_config['port'],
-      :domain => email_config['domain'],
-      :authentication => email_config['authentication'],
-      :user_name => email_config['email'],
-      :password => email_config['password'],
-      :enable_starttls_auto => email_config['enable_starttls_auto']
-    }
-
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
     # like if you have constraints or database-specific column types
